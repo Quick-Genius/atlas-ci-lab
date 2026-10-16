@@ -23,6 +23,6 @@ jobs:
       contents: read
     steps:
       - name: Deploy
-        run: echo "Deploying with token present: ${APP_TOKEN:+yes}"
+        run: echo "Deploying with token (set if non-empty) ${APP_TOKEN:+yes}"
         env:
           APP_TOKEN: ${{ secrets.APP_TOKEN }}
